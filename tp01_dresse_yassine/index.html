@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecrire une page HTML5</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+</head>
+
+<body>
+    <section class="hero is-primary has-text-centered">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title ">
+                    Formulaire client
+                </h1>
+                <h2 class="subtitle">
+                    Tp01 CNAM Web
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <div id="messages"></div>
+    <section class="section">
+        <div class="container">
+            <form id="form_client">
+                <div class="form_input_client">
+                    <label for="name">Civilité </label>
+                    <span>
+                        <input type="radio" name="civilite" value="mr" checked>
+                        <label for="mr">Mr</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="civilite" value="mme">
+                        <label for="mme">Mme</label>
+                    </span>
+                </div>
+
+                <div class="form_input_client">
+                    <label for="name">Nom </label>
+                    <input class="input" type="text" pattern="[A-Za-z]*" placeholder="Nom du client">
+                </div>
+
+                <div class="form_input_client">
+                    <label for="name">Prénom </label>
+                    <input class="input" type="text" pattern="[A-Za-z]*" placeholder="Prénom du client">
+                </div>
+
+                <div class="form_input_client">
+                    <label for="name">Adresse </label>
+                    <input class="input" type="text" placeholder="Adresse du client">
+                </div>
+
+                <div class="form_input_client">
+                    <label for="name">Code postal</label>
+                    <input id="cp" class="input is-error" type="text" pattern="[0-9]*" placeholder="Code postal du client">
+                    <p id="cp_help" class="help is-danger"></p>
+                </div>
+
+                <div class="form_input_client">
+                    <label for="name">Ville</label>
+                    <input class="input" type="text" pattern="[A-Za-z]*" placeholder="Email du client">
+                </div>
+
+                <div class="form_input_client">
+                    <label for="name">Téléphone</label>
+                    <input class="input" type="tel" pattern="[0-9]*" placeholder="Téléphone du client">
+                    <p id="tel_help" class="help"></p>
+                </div>
+
+                <div class="form_input_client">
+                    <label for="name">Email</label>
+                    <input class="input" type="email" placeholder="Email du client">
+                </div>
+
+                <div class="form_input_client">
+                    <label for="name">Pseudo</label>
+                    <input class="input" type="text">
+                </div>
+
+                <div class="form_input_client">
+                    <label for="name">Mot de passe</label>
+                    <input type="password" id="pwd" class="input"                         
+                    minlength="4"
+                    title="Au moins 4 caractères ou plus">
+                </div>
+
+                <div class="form_input_client">
+                    <label for="name">Vérifier mot de passe</label>
+                    <input id="confirm_pwd" type="password" class="input"
+                        minlength="4"
+                        title="Au moins 4 caractères ou plus">
+                </div>
+
+                <div class="form_input_client">
+                    <input type="submit" class="button is-success is-fullwidth" value="Confirmer le formulaire">
+                </div>
+
+            </form>
+
+        </div>
+    </section>
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="validation.js"></script>
+
+</body>
+
+</html>
